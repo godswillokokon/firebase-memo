@@ -18,22 +18,23 @@
 
       <ul id="cafe-list"></ul>
     </div>
+	
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCJKDwtk29W3zq89GvgVkjpyxS1z-7Pd6c",
+    authDomain: "cloud-cafe-9c804.firebaseapp.com",
+    databaseURL: "https://cloud-cafe-9c804.firebaseio.com",
+    projectId: "cloud-cafe-9c804",
+    storageBucket: "cloud-cafe-9c804.appspot.com",
+    messagingSenderId: "522301092944"
+  };
+  firebase.initializeApp(config);
+const db = firebase.firestore();
 
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBKTmhNjIE96FKs8GX41JGhukcrRB5FXoQ",
-        authDomain: "ninja-firestore-tuts-950d1.firebaseapp.com",
-        databaseURL: "https://ninja-firestore-tuts-950d1.firebaseio.com",
-        projectId: "ninja-firestore-tuts-950d1",
-        storageBucket: "ninja-firestore-tuts-950d1.appspot.com",
-        messagingSenderId: "164124280548"
-      };
-      firebase.initializeApp(config);
-      const db = firebase.firestore();
-
-      // db.settings({ timestampsInSnapshots: true });
-    </script>
+</script>
+    
     <script src="app.js"></script>
   </body>
 </html>

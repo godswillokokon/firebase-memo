@@ -12,12 +12,12 @@ function renderCafe(doc) {
   name.textContent = doc.data().name;
   city.textContent = doc.data().city;
   cross.textContent = "X";
-  edit.textContent = "Edit";
+  
 
   li.appendChild(name);
   li.appendChild(city);
   li.appendChild(cross);
-  li.appendChild(edit);
+ 
 
   cafeList.appendChild(li);
 
