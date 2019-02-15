@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Cafe</title>
+  </head>
+
+  <body>
+    <h1>OG Cloud Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" name="name" placeholder="Cafe name" />
+        <input type="text" name="city" placeholder="Cafe city" />
+        <button>Add Cafe</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBKTmhNjIE96FKs8GX41JGhukcrRB5FXoQ",
+        authDomain: "ninja-firestore-tuts-950d1.firebaseapp.com",
+        databaseURL: "https://ninja-firestore-tuts-950d1.firebaseio.com",
+        projectId: "ninja-firestore-tuts-950d1",
+        storageBucket: "ninja-firestore-tuts-950d1.appspot.com",
+        messagingSenderId: "164124280548"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+
+      // db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
