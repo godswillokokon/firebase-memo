@@ -19,9 +19,7 @@
 ##### Features in this project are :
 
 ##### * Simple single page web app
-##### * Anonymous Auth
 ##### * Database
 ##### * Firestore
 ##### * Functions
-##### * Send requests to a Functions server-side instance and get back results.
-##### *Storage
+##### * Storage
