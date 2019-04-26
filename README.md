@@ -4,11 +4,12 @@
 ## Prerequisites
 * Basics of HTML, CSS and JavaScript. 
 * Understanding how event listeners works in JavaScript.
+* You do not need to have any knowledge about Firebase or it's tools.
 
 ### Tools Required
-* Text Editor (Sublime, VSCode, Atom etc.).
-* Firebase CLI.
-* Firebase Console.
+* Text Editor (Sublime, VSCode, Atom etc.), I will be using VSCode, you can download here: https://code.visualstudio.com/download
+* Firebase CLI: https://firebase.google.com/docs/cli
+* Firebase Console: https://console.firebase.google.com/
 
 ## Introduction
 Having pre-knowledge on JavaScript is essential for this tutorial.
@@ -29,9 +30,10 @@ Get familiar with what we are building in the course of the tutorial.
 
 
 ## Features in this project are :
-* Simple single page web app
-* Firebase database
-* Firebase cloud functions
+* Simple single page web app.
+* Firebase database.
+* Firebase cloud functions.
+* Firebase hosting.
 
 ## Conclusion
 * Quick Recap on what was built.
