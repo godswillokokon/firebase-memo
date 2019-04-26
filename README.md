@@ -25,6 +25,8 @@ Get familiar with what we are building in the course of the tutorial.
 
 ## Writing Firebase cloud functions.
 
+## Deploying Functions.
+
 
 ## Features in this project are :
 * Simple single page web app
