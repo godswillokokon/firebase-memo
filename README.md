@@ -1,25 +1,36 @@
 # Firebase Cafe App
-#### Setting up the project
+**TL:DR: ** Learn how to build web apps using Firebase and JavaScript.
 
-* Create a firebase project 
-* Replace the "XXXXXXXX" with the newly created firebase project details at the bottom of index.html
+## Prerequisites
+* Basics of HTML, CSS and JavaScript. 
+* Understanding how event listeners works in JavaScript.
+
+### Tools Required
+* Text Editor (Sublime, VSCode, Atom etc.).
+* Firebase CLI.
+* Firebase Console.
+
+## Introduction
+Having pre-knowledge on JavaScript is essential for this tutorial.
+A collection of quickstart samples demonstrating the Firebase APIs using the Javascript SDK. For more information, see firebase.google.com/docs/web/setup.
 
 
- ##### var config = {
-  #####   apiKey: "XXXXXXXXXXXXXXXXXXX",
- #####    authDomain: "XXXXXXXXXXXXXX",
- #####    databaseURL: "XXXXXXXXXXXXX",
-  #####   projectId: "XXXXXXXXXXXX",
- #####    storageBucket: "XXXXXXXXXXXXX",
- #####    messagingSenderId: "XXXXXXXXXXXXX"
-##### };
- * Run index.html on the browser 
-##### A collection of quickstart samples demonstrating the Firebase APIs using the Javascript SDK. For more information, see firebase.google.com/docs/web/setup.
+## What we're building
+Get familiar with what we are building in the course of the tutorial.
 
-##### Features in this project are :
+## Setting up the Firebase Web app
+* Installing Firebase and it's tools.
+* Creating a Firebase project.
+* Intializing Firebase in the web app.
 
-##### * Simple single page web app
-##### * Database
-##### * Firestore
-##### * Functions
-##### * Storage
+## Writing Firebase cloud functions.
+
+
+## Features in this project are :
+* Simple single page web app
+* Firebase database
+* Firebase cloud functions
+
+## Conclusion
+* Quick Recap on what was built.
+* List out what was learnt.
