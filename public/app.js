@@ -1,23 +1,23 @@
-const cafeList = document.querySelector("#cafe-list");
-const form = document.querySelector("#add-cafe-form");
+const cafeList = document.querySelector("#memo-list");
+const form = document.querySelector("#add-memo-form");
 //create element and render cafe
 function renderCafe(doc) {
   let li = document.createElement("li");
   let name = document.createElement("span");
-  let city = document.createElement("span");
+  let desc = document.createElement("span");
   let cross = document.createElement("div");
   let edit = document.createElement("span");
 
   li.setAttribute("data-id", doc.id);
   name.textContent = doc.data().name;
-  city.textContent = doc.data().city;
+  desc.textContent = doc.data().desc;
   cross.textContent = "X";
-  
+
 
   li.appendChild(name);
-  li.appendChild(city);
+  li.appendChild(desc);
   li.appendChild(cross);
- 
+
 
   cafeList.appendChild(li);
 
@@ -26,7 +26,7 @@ function renderCafe(doc) {
     e.stopPropagation();
     let id = e.target.parentElement.getAttribute("data-id");
     //find a doc on the dom
-    db.collection("cafes")
+    db.collection("memo")
       .doc(id)
       .delete();
   });
@@ -34,7 +34,7 @@ function renderCafe(doc) {
 
 
 // // getting data
-// db.collection("cafes")
+// db.collection("memo")
 //   .get()
 //   .then(snapshot => {
 //     snapshot.docs.forEach(doc => {
@@ -43,9 +43,9 @@ function renderCafe(doc) {
 //   });
 
 // // ordering data
-// db.collection("cafes")
-// .where("city", "<", "d")
-//   .orderBy("city")
+// db.collection("memo")
+// .where("desc", "<", "d")
+//   .orderBy("desc")
 //   .get()
 //   .then(snapshot => {
 //     snapshot.docs.forEach(doc => {
@@ -54,9 +54,9 @@ function renderCafe(doc) {
 //   });
 
 // // making queries
-// db.collection("cafes")
-//   // .where("city", "==", "Calabar")
-//   .where("city", "<", "d")
+// db.collection("memo")
+//   // .where("desc", "==", "Calabar")
+//   .where("desc", "<", "d")
 //   .get()
 //   .then(snapshot => {
 //     snapshot.docs.forEach(doc => {
@@ -67,17 +67,17 @@ function renderCafe(doc) {
 // saving data
 form.addEventListener("submit", e => {
   e.preventDefault();
-  db.collection("cafes").add({
+  db.collection("memo").add({
     name: form.name.value,
-    city: form.city.value
+    desc: form.city.value
   });
   form.name.value = "";
   form.city.value = "";
 });
 
 //  real time listener
-db.collection("cafes")
-  .orderBy("city")
+db.collection("memo")
+  .orderBy("desc")
   .onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
