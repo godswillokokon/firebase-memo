@@ -1,40 +1,42 @@
 <html>
-  <head>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Cafe</title>
-  </head>
 
-  <body>
-    <h1>OG Cloud Cafe</h1>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Cafe</title>
+</head>
 
-    <div class="content">
-      <form id="add-cafe-form">
-        <input type="text" name="name" placeholder="Cafe name" />
-        <input type="text" name="city" placeholder="Cafe city" />
-        <button>Add Cafe</button>
-      </form>
+<body>
+  <h1>Memo</h1>
 
-      <ul id="cafe-list"></ul>
-    </div>
-	
-<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCJKDwtk29W3zq89GvgVkjpyxS1z-7Pd6c",
-    authDomain: "cloud-cafe-9c804.firebaseapp.com",
-    databaseURL: "https://cloud-cafe-9c804.firebaseio.com",
-    projectId: "cloud-cafe-9c804",
-    storageBucket: "cloud-cafe-9c804.appspot.com",
-    messagingSenderId: "522301092944"
-  };
-  firebase.initializeApp(config);
-const db = firebase.firestore();
+  <div class="content">
+    <form id="add-cafe-form">
+      <input type="text" name="name" placeholder="Item name" />
+      <input type="text" name="city" placeholder="Item description" />
+      <button>Add Item</button>
+    </form>
 
-</script>
-    
-    <script src="app.js"></script>
-  </body>
+    <ul id="cafe-list"></ul>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCJKDwtk29W3zq89GvgVkjpyxS1z-7Pd6c",
+      authDomain: "cloud-cafe-9c804.firebaseapp.com",
+      databaseURL: "https://cloud-cafe-9c804.firebaseio.com",
+      projectId: "cloud-cafe-9c804",
+      storageBucket: "cloud-cafe-9c804.appspot.com",
+      messagingSenderId: "522301092944"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+
+  </script>
+
+  <script src="app.js"></script>
+</body>
+
 </html>
