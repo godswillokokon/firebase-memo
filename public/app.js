@@ -1,7 +1,7 @@
-const cafeList = document.querySelector("#memo-list");
+const memoList = document.querySelector("#memo-list");
 const form = document.querySelector("#add-memo-form");
-//create element and render cafe
-function renderCafe(doc) {
+//create element and render Memo
+function renderMemo(doc) {
   let li = document.createElement("li");
   let name = document.createElement("span");
   let desc = document.createElement("span");
@@ -19,7 +19,7 @@ function renderCafe(doc) {
   li.appendChild(cross);
 
 
-  cafeList.appendChild(li);
+  memoList.appendChild(li);
 
   // deleting data
   cross.addEventListener("click", e => {
@@ -38,7 +38,7 @@ function renderCafe(doc) {
 //   .get()
 //   .then(snapshot => {
 //     snapshot.docs.forEach(doc => {
-//       renderCafe(doc);
+//       renderMemo(doc);
 //     });
 //   });
 
@@ -49,7 +49,7 @@ function renderCafe(doc) {
 //   .get()
 //   .then(snapshot => {
 //     snapshot.docs.forEach(doc => {
-//       renderCafe(doc);
+//       renderMemo(doc);
 //     });
 //   });
 
@@ -60,7 +60,7 @@ function renderCafe(doc) {
 //   .get()
 //   .then(snapshot => {
 //     snapshot.docs.forEach(doc => {
-//       renderCafe(doc);
+//       renderMemo(doc);
 //     });
 //   });
 
@@ -75,6 +75,14 @@ form.addEventListener("submit", e => {
   form.city.value = "";
 });
 
+
+// db.collection('memo').get().then((snapshot) => {
+
+//   snapshot.docs.forEach(doc => {
+//     console.log(doc.data())
+//   })
+// });
+
 //  real time listener
 db.collection("memo")
   .orderBy("desc")
@@ -83,10 +91,10 @@ db.collection("memo")
     changes.forEach(change => {
       // console.log(change.doc.data());
       if (change.type == "added") {
-        renderCafe(change.doc);
+        renderMemo(change.doc);
       } else if (change.type == "removed") {
-        let li = cafeList.querySelector("[data-id=" + change.doc.id + "]");
-        cafeList.removeChild(li);
+        let li = memoList.querySelector("[data-id=" + change.doc.id + "]");
+        memoList.removeChild(li);
       }
     });
   });
