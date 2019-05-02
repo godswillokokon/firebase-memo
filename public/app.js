@@ -69,10 +69,10 @@ form.addEventListener("submit", e => {
   e.preventDefault();
   db.collection("memo").add({
     name: form.name.value,
-    desc: form.city.value
+    desc: form.desc.value
   });
   form.name.value = "";
-  form.city.value = "";
+  form.desc.value = "";
 });
 
 
